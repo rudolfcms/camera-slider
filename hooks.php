@@ -14,22 +14,31 @@ Hooks\Filter::add('head_stylesheets', function ($stylesheets) {
 });
 Hooks\Filter::add('head_after', function ($after) {
     $after[] = '
-    <script src="'.PLUGINS.'/camera-slider/bower_components/camera/scripts/jquery.min.js"></script>
-    <script src="'.PLUGINS.'/camera-slider/bower_components/camera/scripts/jquery.mobile.customized.min.js"></script>
-    <script src="'.PLUGINS.'/camera-slider/bower_components/camera/scripts/jquery.easing.1.3.js"></script>
-    <script src="'.PLUGINS.'/camera-slider/bower_components/camera/scripts/camera.min.js"></script>
+    <style>
+        .camera_caption a {
+            color: #fff;
+        }
+    </style>';
+
+    return $after;
+});
+Hooks\Filter::add('foot_scripts', function ($scripts) {
+    $scripts = [
+        PLUGINS.'/camera-slider/bower_components/camera/scripts/jquery.mobile.customized.min.js',
+        PLUGINS.'/camera-slider/bower_components/camera/scripts/jquery.easing.1.3.js',
+        PLUGINS.'/camera-slider/bower_components/camera/scripts/camera.min.js',
+    ];
+    return $scripts;
+});
+Hooks\Filter::add('foot_after', function ($after) {
+    $after[] = '
     <script>
         $(function(){
             $("#camera_wrap_1").camera({
                 thumbnails: true
             });
         });
-    </script>
-    <style>
-        .camera_caption a {
-            color: #fff;
-        }
-    </style>';
+    </script>';
 
     return $after;
 });
