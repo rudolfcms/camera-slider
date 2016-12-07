@@ -68,7 +68,7 @@ Hooks\Action::add('home_page_slider', function () {
                 </div>
             </div>',
             Image::resize($item->thumb(), 100, 75),
-            $item->album() ? $item->thumb() : DIR . $item->thumb(),
+            Image::resize($item->thumb(), 1000, 500),
             $item->url(),
             $item->title()
         );
