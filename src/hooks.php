@@ -7,8 +7,10 @@ use Rudolf\Component\Hooks;
 
 include 'Model.php';
 
+define("CAMERA_DIR", PLUGINS.'/camera-slider');
+
 Hooks\Filter::add('head_stylesheets', function ($stylesheets) {
-    $stylesheets[] = PLUGINS.'/camera-slider/bower_components/camera/css/camera.css';
+    $stylesheets[] = CAMERA_DIR.'/css/camera.min.css';
 
     return $stylesheets;
 });
@@ -24,9 +26,9 @@ Hooks\Filter::add('head_after', function ($after) {
 });
 Hooks\Filter::add('foot_scripts', function ($scripts) {
     $scripts = [
-        PLUGINS.'/camera-slider/bower_components/camera/scripts/jquery.mobile.customized.min.js',
-        PLUGINS.'/camera-slider/bower_components/camera/scripts/jquery.easing.1.3.js',
-        PLUGINS.'/camera-slider/bower_components/camera/scripts/camera.min.js',
+        CAMERA_DIR.'/scripts/jquery.mobile.customized.min.js',
+        CAMERA_DIR.'/scripts/jquery.easing.1.3.js',
+        CAMERA_DIR.'/scripts/camera.js',
     ];
     return $scripts;
 });

@@ -1,0 +1,24 @@
+image: node:4.2.2
+
+cache:
+  paths:
+  - bower_components
+  - node_modules
+
+build:
+  script:
+  - npm install -g bower
+  - npm install -g gulp
+  - bower install --allow-root
+  - npm install
+  - npm run build
+  - cd build/
+  - mv css/ images/ scripts/ Model.php hooks.php ../
+  - cd ../
+  artifacts:
+    paths:
+    - css/
+    - images/
+    - scripts/
+    - Model.php
+    - hooks.php

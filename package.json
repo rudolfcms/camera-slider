@@ -1,0 +1,22 @@
+{
+  "name": "camera-slider",
+  "version": "1.0.0",
+  "description": "camera slider plugin for rudolf",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build"
+  },
+  "author": "Mikołaj Pich <m.pich@outlook.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.1",
+    "lodash": "^4.17.4",
+    "run-sequence": "^1.2.2"
+  }
+}

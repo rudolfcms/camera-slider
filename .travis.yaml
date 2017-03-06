@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - "6"
+
+install:
+  - npm install -g bower
+  - bower install
+  - npm install
+
+script:
+  - npm run build
+
+before_deploy:
+  - cd build/
+  - zip -r camera-slider *
+
+deploy:
+  provider: releases
+  api_key:
+    secure: xyz
+  file: camera-slider.zip
+  on:
+    tags: true

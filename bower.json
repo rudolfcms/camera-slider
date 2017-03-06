@@ -1,10 +1,10 @@
 {
   "name": "camera-slider",
+  "description": "camera slider plugin for rudolf",
+  "main": "",
   "authors": [
     "Mikołaj Pich <m.pich@outlook.com>"
   ],
-  "description": "",
-  "main": "",
   "license": "MIT",
   "homepage": "",
   "ignore": [
@@ -15,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "camera": "*"
+    "Camera": "Camera#6e76de15a8"
   }
 }
