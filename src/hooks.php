@@ -36,7 +36,7 @@ Hooks\Filter::add('foot_after', function ($after) {
     $after[] = '
     <script>
         $(function(){
-            if ($("#camera_wrap_1").length ) {
+            if ($("#camera_wrap_1").length) {
                 $("#camera_wrap_1").camera({
                     thumbnails: true
                 });

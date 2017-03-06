@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera slider plugin</title>
+    <link rel="stylesheet" href="./build/css/camera.min.css">
+    <style>
+      .camera_caption a {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="wrapper">
+      <h1>Camera slider plugin</h1>
+      <div class="camera_wrap camera_azure_skin" id="camera_example">
+        <div data-src="https://c1.staticflickr.com/8/7584/16743873771_c653f8ebe5_k.jpg">
+          <div class="camera_caption fadeFromBottom">
+            <a href="https://flic.kr/p/rvAJjP">Falcon 9 Launch 3-1-15 by Grant Collins</a>
+          </div>
+        </div>
+        <div data-src="https://c1.staticflickr.com/8/7566/16229668022_f0e8b1aae4_b.jpg">
+          <div class="camera_caption fadeFromBottom">
+            <a href="https://flic.kr/p/qJahSs">SpaceX by NASA Kennedy</a>
+          </div>
+        </div>
+        <div data-src="https://c1.staticflickr.com/3/2437/32269420513_2f20118a01_k.jpg">
+          <div class="camera_caption fadeFromBottom">
+            <a href="https://flic.kr/p/Raxdtc">iss050e052139 rocket by NASA Johnson</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./build/scripts/jquery.min.js"></script>
+    <script src="./build/scripts/jquery.mobile.customized.min.js"></script>
+    <script src="./build/scripts/jquery.easing.1.3.js"></script>
+    <script src="./build/scripts/camera.js"></script>
+    <script>
+      $(function(){
+        if ($("#camera_example").length) {
+          $("#camera_example").camera();
+        }
+      });
+    </script>
+  </body>
+</html>
