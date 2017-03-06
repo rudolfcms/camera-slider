@@ -18,7 +18,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: xyz
+    secure: "pzz2eppocLltDhUpjEuakzDSsrSES6ZrkWcPJfOfre/Zxq/QaO1wIMsKRRwcyA5dV4VQHBPFUf4Ms4xxwzM3ldX8KK1vQkf3m18EoC9VvB/5bdSlOND/iKhR2n87bwkyiG33ktiBt+keHGeQWe4+vu7Bb6Gs9Na0Efb0F0ryWiQdyXKhJUoNG76EnRv5nmIEBO4dEWMweqmvDZrRAWklazNZ976HTKRYCGqg2WJN5hMDP4j//6FRSCazCf7dr1W+chGvPeYoX5qZkvqt+hghM6crcRh8RfnXjVv0AzgHoRvxx6+jPGJ0x6YDbVrjToncb7EAhBsaEHvMAIXMX28FAGkfsgbSt1GMPV3z0Xbm3iOAirYQ4qBIGDqNX3J/nyUds3Q6i04bQVItymmmSSNx/AOM0TuObtNE70MvbSU+17RChd23K6+PStLasuFJ4U9vqWB4Wevyk94Lrnu43p2/KbKWEnkAVF9zM4NzNoIcJ30Kn1J63OW5HDSBLjTGecs40CR3/83A8F8byD6Nfyg+NFX+w1vIvPqtblS9YfGI1SNHghszwtfLt7fIjigQP4DpaLeQOPTJanPRLktXv/rHPZAleox3O6lgi8wPOHX4CP3ypvmOdBJp5VL8AXEIUr+8kVg5TkrJvsnW8nEPH6n8m7HJoWWuACmFkELK5+Ep0Zw="
   file: camera-slider.zip
   on:
     tags: true
