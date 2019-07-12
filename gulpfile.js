@@ -1,55 +1,57 @@
-var _  = require("lodash");
-var cssmin = require('gulp-cssmin');
-var del = require("del");
-var gulp = require("gulp");
-var imagemin = require('gulp-imagemin');
-var rename = require('gulp-rename');
-var runSequence = require("run-sequence");
-var uglify = require('gulp-uglify');
+const cssmin = require('gulp-cssmin');
+const del = require("del");
+const gulp = require("gulp");
+const imagemin = require('gulp-imagemin');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 
-var paths = {
-  bower: "./bower_components/",
+const paths = {
+  npm: "./node_modules/",
   dest: "./build/"
-}; 
+};
 
-gulp.task("css", function() {
-  gulp.src(paths.bower + "Camera/css/camera.css")
+gulp.task("css", function(done) {
+  gulp.src(paths.npm + "Camera/css/camera.css")
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(paths.dest + "css/"));
+
+  done();
 });
 
-gulp.task('images', function() {
-  gulp.src(paths.bower + "Camera/images/*.{gif,png}")
+gulp.task('images', function(done) {
+  gulp.src(paths.npm + "Camera/images/*.{gif,png}")
     .pipe(imagemin())
     .pipe(gulp.dest(paths.dest + "images/"));
 
 
-  gulp.src(paths.bower + "Camera/images/patterns/*.png")
+  gulp.src(paths.npm + "Camera/images/patterns/*.png")
     .pipe(imagemin())
     .pipe(gulp.dest(paths.dest + "images/patterns/"));
+
+  done();
 });
 
-gulp.task('scripts', function() {
-  gulp.src([paths.bower + "Camera/scripts/*.js", "!"+paths.bower + "Camera/scripts/camera.min.js"])
+gulp.task('scripts', function(done) {
+  gulp.src([paths.npm + "Camera/scripts/*.js", "!"+paths.npm + "Camera/scripts/camera.min.js"])
     .pipe(uglify())
     .pipe(gulp.dest(paths.dest + "scripts/"));
+  done();
 });
 
-gulp.task("php", function () {
+gulp.task("php", function (done) {
   gulp.src("./src/**/*.php")
     .pipe(gulp.dest(paths.dest));
+    done();
 });
 
 gulp.task("clean", function() {
-  del.sync(paths.dest);
+  return del(paths.dest);
 });
 
 // Build Sequences
 // ---------------
 
-gulp.task("default", ["build"]);
+gulp.task("build", gulp.series("clean", gulp.parallel("css", "images", "scripts", "php")));
 
-gulp.task("build", function() {
-  runSequence("clean", ["css", "images", "scripts", "php"]);
-});
+exports.default = gulp.series("build");
