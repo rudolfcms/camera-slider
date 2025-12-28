@@ -70,9 +70,9 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"Camera@github:pixedelic/Camera#6e76de15a8":
+"Camera@github:rudolfcms/CameraSlider.js#78bafb3":
   version "0.0.0"
-  resolved "https://codeload.github.com/pixedelic/Camera/tar.gz/6e76de15a86488e8d7a98aba041443e036e38e6b"
+  resolved "https://codeload.github.com/rudolfcms/CameraSlider.js/tar.gz/78bafb3a654e93d31fc1059f15533dfa9c71b70e"
 
 abbrev@1:
   version "1.1.1"
