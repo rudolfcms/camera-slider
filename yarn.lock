@@ -70,9 +70,9 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"Camera@github:rudolfcms/CameraSlider.js#78bafb3":
+"Camera@github:rudolfcms/CameraSlider.js#ab1aa7d":
   version "0.0.0"
-  resolved "https://codeload.github.com/rudolfcms/CameraSlider.js/tar.gz/78bafb3a654e93d31fc1059f15533dfa9c71b70e"
+  resolved "https://codeload.github.com/rudolfcms/CameraSlider.js/tar.gz/ab1aa7d6ce6b6cd3b9aa8cf8c5416a2e8bf98fdb"
 
 abbrev@1:
   version "1.1.1"

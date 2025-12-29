@@ -9,7 +9,7 @@
   "author": "Mikołaj Pich <m.pich@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "Camera": "github:rudolfcms/CameraSlider.js#78bafb3"
+    "Camera": "github:rudolfcms/CameraSlider.js#ab1aa7d"
   },
   "devDependencies": {
     "del": "^5.0.0",
